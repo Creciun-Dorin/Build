@@ -1,0 +1,55 @@
+// Colors
+$color_ShowHiddenIcon: grey;
+$color_ShowHiddenIcon_hover: rgb(48, 48, 48);
+$color_Outline: red;
+$color_Border: rgb(233, 235, 240);
+$color_Background: rgb(255, 255, 255);
+
+
+.password_input {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	min-width: 100px;
+	height: 40px;
+	padding: 8px 16px;
+	box-sizing: border-box;
+	border: 1px solid $color_Border;
+	border-radius: 8px;
+	background: $color_Background;
+
+	input {
+		border: none;
+		background-color: transparent;
+		outline: none;
+		min-width: 10px;
+		flex: 1;
+	}
+
+	.show_hidden {
+		padding: 0;
+		border: none;
+		background-color: transparent;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		circle,
+		path {
+			transition: stroke .3s ease;
+			stroke: $color_ShowHiddenIcon;
+		}
+
+		&:hover {
+
+			circle,
+			path {
+				stroke: $color_ShowHiddenIcon_hover;
+			}
+		}
+	}
+}
+
+.outline{
+	outline:1px solid $color_Outline !important;
+}
